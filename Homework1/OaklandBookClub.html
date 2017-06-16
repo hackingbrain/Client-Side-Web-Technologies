@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Leanne Liang">
+        <meta name="andrewid" content="sijiel">
+        <title>Oakland Book Club</title>
+
+    </head>
+
+    <body>
+    <!-- Show the reading dog image -->
+    <img src="reading_dog.jpg" alt="Reading Dog">
+        <section>
+        <!-- Heading -->
+            <h1>Oakland Book Club</h1>
+        <!-- First Subsection with Table -->
+            <section>
+                <h1>What We Are Reading Now</h1>
+                <table border="1">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>The Catcher in the Rye</td>
+                        <td>J.D. Salinger</td>
+                        <td><a href = "http://www.amazon.com/Catcher-Rye-J-D-Salinger/dp/0316769487/" target="_blank">0316769487</a></td>
+                    </tr>
+                    <tr>
+                        <td>The Great Gatsby</td>
+                        <td>F. Scott Fitzgerald</td>
+                        <td><a href = "http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">0743273567</a></td>
+                    </tr>
+                    <tr>
+                        <td>A Separate Peace</td>
+                        <td>John Knowles</td>
+                        <td><a href = "http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">0743253973</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Second Subsection with SVG Image -->
+            <section>
+                <h1>Our Favorite Genres</h1>
+                <p>We recently conducted a poll among our members and found out what our favorite book genres are. Here are results: </p>
+
+
+                <svg width="400" height="260">
+                    <line x1="25" y1="200" x2="300" y2="200" style="stroke:rgb(68,66,64);stroke-width:2" />
+                    <text x="0" y="205" fill="dark-grey" font-size="11">0</text>
+                    <line x1="25" y1="100" x2="300" y2="100" style="stroke:rgb(68,66,64);stroke-width:2" />
+                    <text x="0" y="155" fill="dark-grey" font-size="11">50</text>
+                    <line x1="25" y1="150" x2="300" y2="150" style="stroke:rgb(68,66,64);stroke-width:2" />
+                    <text x="0" y="105" fill="dark-grey" font-size="11">100</text>
+                    <rect x = 50 y = 125 width="10" height="75" style="fill:rgb(55,92,150);stroke-width:3;stroke:rgb(0,0,0)" />
+                    <rect x = 100 y = 50 width="10" height="150" style="fill:rgb(115,150,55);stroke-width:3;stroke:rgb(0,0,0)" />
+                    <rect x = 150 y = 100 width="10" height="100" style="fill:rgb(168,53,99);stroke-width:3;stroke:rgb(0,0,0)" />
+                    <rect x = 200 y = 175 width="10" height="25" style="fill:rgb(206,182,95);stroke-width:3;stroke:rgb(0,0,0)" />
+                    <rect x = 250 y = 135 width="10" height="65" style="fill:rgb(206,134,95);stroke-width:3;stroke:rgb(0,0,0)" />
+                    <text x="0" y="-5" fill="dark-grey" font-size="11" transform="rotate(-20 700,50)">Biographics</text>
+                    <text x="60" y="20" fill="dark-grey" font-size="11" transform="rotate(-20 700,50)">Sci-Fi</text>
+                    <text x="90" y="30" fill="dark-grey" font-size="11" transform="rotate(-20 700,0)">Humor</text>
+                    <text x="120" y="40" fill="dark-grey" font-size="11" transform="rotate(-20 700,-50)">Mystery</text>
+                    <text x="150" y="55" fill="dark-grey" font-size="11" transform="rotate(-20 700,-120)">Other</text>
+
+                </svg>
+            </section>
+
+            <section>
+                <!-- Third Subsection with An Unordered List -->
+                <h1>About Us</h1>
+                <p>We are a group of diverse individuals who all share one common trait - the love of a good book! If you also love good books,
+                    why don't you consider joining our group? Some of the benefits to joining are: </p>
+                <ul>
+                    <li>You get to read lots of great books!</li>
+                    <li>You get to meet new and interesting people</li>
+                    <li>You get to visit lots of different locations in beautiful Oakland!</li>
+                </ul>
+
+
+                <p>For more information please contact Pauline using the following information or fill out the form at the bottom of the page: </p>
+                Pauline Smith <br />
+                Oakland Book Club Director <br />
+                9876 Forbes Avenue<br />
+                Pittsburgh, PA 15213 <br />
+                (412) 998-5454
+            </section>
+
+            <section>
+                <!-- Fourth Subsection with A Form -->
+                <h1>Contact Us</h1>
+                <form name="contactname" action="http://csw08724.appspot.com/hw1.do" method="post">
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        <div>
+                        <label>Name*:&nbsp;
+                            <input type="text" name="name" required="required" placeholder="Joe Smith">
+                        </label>
+                        </div>
+                        <div>
+                        <label>Phone#:&nbsp;
+                            <input type="tel" name="phone">
+                        </label>
+                        </div>
+                        <div>
+                            <label for="inputEmail">Email*: &nbsp;
+                            <input type="email" id="inputEmail" name="email" required="required" placeholder="joe.smith@foo.com">
+                            </label>
+                        </div>
+                        <div>
+                            <label>How did you hear about us?: &nbsp;
+                                <select name="howheard">
+                                    <option value="Website">Website</option>
+                                    <option value="Friend/Relative">Friend/Relative</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </label>
+                        </div>
+                        <input type="submit" value="Submit Form">
+                        <input type="reset" value="Reset Form">
+                    </fieldset>
+                </form>
+            </section>
+        </section>
+    </body>
+</html>
