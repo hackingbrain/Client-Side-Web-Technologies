@@ -1,0 +1,35 @@
+<div class="panel panel-success" ng-cloak>
+    <div class="panel-heading">
+    </div>
+    <div class="panel panel-success" ng-cloak>
+        <div class="panel-heading">
+        </div>
+        <div class="panel-body">
+            <table id="addressTable" class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="val in values track by val.lastName">
+                    <td>
+            <span class="btn btn-lg" ng-click="removeAddress(val.lastName)">
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+
+                    <td><a style="cursor: pointer;" ng-click="showContact(val.lastName)">{{ val.firstName +" " + val.lastName  }}</a></td>
+                    <td>{{ val.email }}</td>
+                    <td>{{ val.phoneNumber }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button ng-click="clicked()">Add Contact</button>
+
+</div>

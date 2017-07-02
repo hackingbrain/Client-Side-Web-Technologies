@@ -1,0 +1,111 @@
+<form class="form-horizontal" ng-controller="contactController" ng-submit="submit()">
+
+    <div class="col-lg-6">
+        <div class="panel panel-primary">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">Contact Information</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">First Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" required placeholder="Enter First Name"
+                               ng-model="address.firstName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Last Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" ng-disabled="isDisable()" class="form-control" required placeholder="Enter Last Name"
+                               ng-model="address.lastName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="Enter Email" ng-model="address.email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Phone Number</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="Enter Phone Number"
+                               ng-model="address.phoneNumber">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" required placeholder="Enter Address"
+                               ng-model="address.addr">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" required placeholder="Enter City" ng-model="address.city">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-4">
+                        <select ng-model="address.state" required class="form-control"
+                                ng-options="name as value for (name, value) in stateOptions">
+                            <option value="" selected="selected">Choose one</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Zip Code</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" required placeholder="Enter Zip Code" ng-model="address.zip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button ng-click="saved()" type="submit" class="btn btn-default">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-6">
+        <div class="panel panel-primary">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">Photo</h3>
+            </div>
+
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Image File</label>
+                    <div class="col-sm-4 control-label">
+                        <input type="file" accept="image/*" csw-file-input file-data="address.files">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div ng-show="address.files" style="margin: 20px 0px;">
+                        <div class="col-sm-4 control-label">
+                            <img width="250" ng-src="{{address.files}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">Map</h3>
+            </div>
+            <div class="panel-body">
+                <ng-map zoom="11" center="{{address.addr+address.city}}" style="width:600px; height:400px">
+                    <marker position="{{address.addr+address.city}}" title="{{addr+city}}"></marker>
+                </ng-map>
+            </div>
+        </div>
+    </div>
+</form>
