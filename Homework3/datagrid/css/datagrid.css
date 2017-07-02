@@ -1,0 +1,57 @@
+caption {
+    text-align: right;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+th, tr, td {
+    border: 1px solid lightgrey;
+}
+th{
+    padding:0.5em;
+}
+
+td{
+    padding:0.8em;
+}
+
+tr th:hover  {
+    color: blue;
+    cursor: pointer;
+}
+
+
+
+#next{
+    color:blue;
+
+    cursor: pointer;
+}
+#previous{
+    color:blue;
+    cursor: pointer;
+}
+
+thead {
+    background: linear-gradient(180deg, whitesmoke, lightgrey);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+#marked {
+    background-color: rgba(1,102,180,0.15);
+}
+#firstpage, #lastpage{
+    color: #b3b3b3;
+    cursor: default;
+}
