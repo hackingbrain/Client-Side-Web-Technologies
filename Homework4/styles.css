@@ -1,0 +1,96 @@
+
+
+@import url('http://fonts.googleapis.com/css?family=Cuprum');
+html{
+    font-family: 'Cuprum',serif;
+    color:rgb(0,0,0);
+    margin-top:0;
+    width:100%;
+}
+
+body {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+header{
+    flex-basis:100%;
+}
+main{
+    flex-basis: 55%;
+    padding:2.5%;
+
+}
+
+div#main-slider{
+    flex-basis:35%;
+    padding: 2.5%;
+}
+
+h1{
+    text-align: center;
+    padding: 2%;
+    border-bottom:2px solid rgb(207,207,209);
+    color: rgb(107,110,114);
+}
+
+h2{
+    color: rgb(41,97,130);
+}
+
+h3{
+    color:rgb(75,173,229);
+}
+
+
+.slider-wrapper {
+    display:block;
+    width: 96%;
+    height: 96%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin:auto;
+    transition: opacity 1s ease-in;
+    box-shadow: 10px 10px 5px rgb(204, 207,209);
+}
+
+.slider-wrapper > .slide:first-child {
+    opacity: 1;
+}
+
+@media screen and (max-width: 960px) {
+    body{
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        flex: 1 0 auto;
+        align-items: stretch;
+        display:block;
+    }
+
+    .slider-wrapper {
+        margin:auto;
+        display:block;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+
+}
+
+@media screen and (min-width: 961px) {
+    body {
+        flex-direction: row;
+        flex-wrap:wrap;
+
+    }
+}
+
+
+
